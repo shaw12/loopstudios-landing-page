@@ -17,7 +17,9 @@
   <header>
     <nav>
       <div class="logo">
-        <img src="./images/logo.svg" alt="logo">
+        <img src="./images/logo.svg" alt="logo" class="logo__main">
+        <img src="./images/icon-hamburger.svg" alt="" class="mobile ham">
+        <img src="./images/icon-close.svg" alt="" class="mobile close">
       </div>
       <ul class="nav-lists">
         <li>About</li>
@@ -160,6 +162,24 @@
     </div>
 
   </footer>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script> 
+  <script>
+    $(document).ready(function(){
+    $('.nav-lists').hide();
+    $('.close').hide();
+    $('.ham').on('click', () => {
+          $('.nav-lists').toggle();
+          $('.close').toggle();
+          $('.ham').toggle();
+      })
+      $('.close').on('click', () => {
+          $('.nav-lists').toggle();
+          $('.ham').toggle();
+          $('.close').toggle();
+      })
+    })
+  </script>
 
 </body>
 </html>
